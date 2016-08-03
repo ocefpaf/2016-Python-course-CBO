@@ -9,9 +9,8 @@ install:
 
       export PATH=/Users/travis/miniconda3/bin:$PATH
 
-      conda config --set show_channel_urls true
       conda update --yes --all
-      conda install --yes conda install constructor
+      conda install --yes constructor
 
 script:
-  - constructor ./distribution
+  - constructor distribution
