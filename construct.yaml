@@ -1,0 +1,69 @@
+name: conda-forge
+version: 1.0
+
+channels:
+  - http://repo.continuum.io/pkgs/free/
+  - https://conda.anaconda.org/conda-forge/
+
+specs:
+  - python 2.7*
+  - conda
+  - beautifulsoup4
+  - cartopy
+  - cc-plugin-glider  # Python 2.7
+  - cmocean
+  - compliance-checker
+  - ctd
+  - cython
+  - descartes
+  - fiona
+  - folium
+  - gdal
+  - geojson
+  - geojsonio
+  - geopandas
+  - geos
+  - gridgeo
+  - gsw
+  - iris
+  - jupyter
+  - launcher
+  - matplotlib
+  - mpld3
+  - mplleaflet
+  - netcdf4
+  - numpy
+  - oceans
+  - oct2py
+  - owslib
+  - pandas
+  - proj.4
+  - pygc
+  - pyhum  # Python 2.7
+  - pyoos  # Python 2.7
+  - pyproj
+  - pyresample
+  - pysgrid
+  - pyugrid
+  - qrcode
+  - rasterio
+  - rasterstats
+  - requests
+  - rios
+  - rtree
+  - scikit-learn
+  - scipy
+  - seaborn
+  - seawater
+  - shapely
+  - statsmodels
+  - sympy
+  - thredds_crawler
+  - xarray
+  - xlrd
+  - xarray
+  - pyyaml
+
+license_file: EULA.txt
+
+welcome_image: anvil.png  # [win]
