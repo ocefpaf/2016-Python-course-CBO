@@ -4,17 +4,17 @@ os:
 
 sudo: false
 
+addons:
+  artifacts: true
+
 install:
-  - |
-    MINICONDA_URL="http://repo.continuum.io/miniconda"
-    MINICONDA_FILE="Miniconda3-latest-MacOSX-x86_64.sh"
-    curl -O "${MINICONDA_URL}/${MINICONDA_FILE}"
-    bash $MINICONDA_FILE -b
-
-    export PATH=/Users/travis/miniconda3/bin:$PATH
-
-    conda update --yes --all
-    conda install --yes constructor
+    - URL="https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh"
+    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then URL="http://bit.ly/miniconda" ; fi
+    - wget $URL -O miniconda.sh
+    - bash miniconda.sh -b -p $HOME/miniconda
+    - export PATH="$HOME/miniconda/bin:$PATH"
+    - conda update --yes --all
+    - conda install --yes constructor
 
 script:
   - constructor distribution
