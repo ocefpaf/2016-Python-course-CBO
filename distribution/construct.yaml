@@ -66,4 +66,4 @@ specs:
 
 license_file: EULA.txt
 
-welcome_image: anvil.png  # [win]
+welcome_image: logo.png  # [win]
