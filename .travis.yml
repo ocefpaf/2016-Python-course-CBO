@@ -1,16 +1,20 @@
-language: objective-c
+os:
+  - linux
+  - osx
+
+sudo: false
 
 install:
-    - |
-      MINICONDA_URL="http://repo.continuum.io/miniconda"
-      MINICONDA_FILE="Miniconda3-latest-MacOSX-x86_64.sh"
-      curl -O "${MINICONDA_URL}/${MINICONDA_FILE}"
-      bash $MINICONDA_FILE -b
+  - |
+    MINICONDA_URL="http://repo.continuum.io/miniconda"
+    MINICONDA_FILE="Miniconda3-latest-MacOSX-x86_64.sh"
+    curl -O "${MINICONDA_URL}/${MINICONDA_FILE}"
+    bash $MINICONDA_FILE -b
 
-      export PATH=/Users/travis/miniconda3/bin:$PATH
+    export PATH=/Users/travis/miniconda3/bin:$PATH
 
-      conda update --yes --all
-      conda install --yes constructor
+    conda update --yes --all
+    conda install --yes constructor
 
 script:
   - constructor distribution
