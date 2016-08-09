@@ -39,5 +39,5 @@ test_script:
     - "%CMD_IN_ENV% constructor --verbose --platform=win-64  distribution"
 
 artifacts:
-  - path: appveyor PushArtifact conda-forge-1.0-Windows-x86_64.exe
-    name: conda-forge
+  - path: appveyor PushArtifact ioos-1.0-Windows-x86_64.exe
+    name: ioos
