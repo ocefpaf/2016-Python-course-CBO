@@ -5,7 +5,8 @@ os:
 sudo: false
 
 install:
-  - URL="https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh"
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then URL="https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh" ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then URL="https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh" ; fi
   - wget $URL -O miniconda.sh
   - bash miniconda.sh -b -p $HOME/miniconda
   - export PATH="$HOME/miniconda/bin:$PATH"
