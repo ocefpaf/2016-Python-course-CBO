@@ -1,5 +1,6 @@
 os:
   - osx
+  - linux
 
 sudo: false
 
@@ -12,12 +13,5 @@ install:
   - conda install --yes constructor
 
 script:
-  - constructor --verbose --platform=osx-64 distribution
-
-#deploy:
-  #provider: releases
-  #api_key:
-    #secure: rz+LR93UC1mnuQhSe8lnlw051VTITDNC6ZncWhkJqIKg428zI7pDodue1ErS1Brl6uElzZcCRzYeaoQblTTS93qCuf2XanJ8HDcgpDDDu3gcDUZRaEc77Ii1JddjBw96NXzW62TUwhRySHR836UVJ4KYAuTModrV6BwkEeRuvJABGdCFhZSkQgUmokygbWlMySh0zl1fPul3kI99qzGZwSXIhOxARqa5AFBu+9PtLgwSkxc8u8HefQzSwyngeGBjEet1U1IggusPFr6BiedpMleluawnrqwa7RoElmWqGyOGy5Vf1Q+kdbTyWUdr80pt86Hsf9KEyxWwdnTb955HsKXt1PIaNzISGbRk/n8iQYM0Zw6U8zUUKwH6HdYCa5hBafIHRpRjJ7pG45MtE1Ck97eUrb7cdQsqvjok6Sw8z6GmCXqWtZ8U4OCSxa0c3QuWfAEWzQStfwn6Q7ifXq3LKj116bhvYLATbwtsYmNTjPTro3QczJY0h5JMS8kAdSKbjNt8YOMA2gnHVF0vz2+keoTooHp0YNGFBdqgyCkcP5RtGkk8UMKKkPMTdFv25JTb4G/C/zRhQJN1lJM8uNZakuR7yUF39lyjJjJSlvKR7ebCe4ILuPvPzHBa1rvigfj3B0fuj6lKLb1Ts8U3lYE6IlaZd1b1hRgjzffg4h4nP4M=
-  #file: conda-forge-1.0-*.sh
-  #on:
-    #repo: ocefpaf/2016-Python-course-CBO
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then constructor --verbose --platform=osx-64 distribution ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then constructor --verbose --platform=linux-64 distribution ; fi
