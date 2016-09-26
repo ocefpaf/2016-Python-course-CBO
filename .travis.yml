@@ -1,3 +1,5 @@
+language: generic
+
 os:
   - osx
   - linux
@@ -11,8 +13,6 @@ install:
   - bash miniconda.sh -b -p $HOME/miniconda
   - export PATH="$HOME/miniconda/bin:$PATH"
   - conda update --yes --all
-  - conda install --yes constructor
 
 script:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then constructor --verbose --platform=osx-64 distribution ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then constructor --verbose --platform=linux-64 distribution ; fi
+  - conda env create -f environment.yml

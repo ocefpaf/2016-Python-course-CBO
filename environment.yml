@@ -1,0 +1,23 @@
+name: mapping
+channels:
+    - conda-forge
+dependencies:
+    - python=2.7
+    - numpy
+    - jupyter
+    - matplotlib
+    - scipy
+    - fiona
+    - rasterio
+    - rios
+    - rasterstats
+    - cartopy
+    - cmocean
+    - netcdf4
+    - xarray
+    - pyresample
+    - gridgeo
+    - folium
+    - mplleaflet
+    - pyhum
+    - xlrd

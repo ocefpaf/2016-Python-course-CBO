@@ -29,15 +29,11 @@ install:
           $env:path="$root;$root\Scripts;$root\Library\bin;$($env:path)"
 
     - cmd: set PATH=%CONDA_INSTALL_LOCN%;%CONDA_INSTALL_LOCN%\scripts;%PATH%
+
     - cmd: conda update --yes --all
-    - cmd: conda install --yes constructor
 
 # Skip .NET project specific build phase.
 build: off
 
 test_script:
-    - "%CMD_IN_ENV% constructor --verbose --platform=win-64  distribution"
-
-artifacts:
-  - path: appveyor PushArtifact ioos-1.0-Windows-x86_64.exe
-    name: ioos
+    - "%CMD_IN_ENV% conda env create -f environment.yml"
