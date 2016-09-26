@@ -1,4 +1,4 @@
-# 2016 Python Course -- CBO
+# Curso de Python CBO 2016
 
 [![Build Status](https://travis-ci.org/ocefpaf/2016-Python-course-CBO.svg?branch=master)](https://travis-ci.org/ocefpaf/2016-Python-course-CBO) [![Build status](https://ci.appveyor.com/api/projects/status/dokxy0ev3h7tmp60?svg=true)](https://ci.appveyor.com/project/ocefpaf/2016-python-course-cbo) [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org:/repo/ocefpaf/2016-python-course-cbo)
 
@@ -10,21 +10,27 @@ Recomendamos a distribuição Python [miniconda](http://conda.pydata.org/minicon
 uma versão leve da distribuição Python [Anaconda](https://store.continuum.io/cshop/anaconda/),
 e as instruções abaixo são escritas com ela em mente.
 
-1. Download e instale a versão apropriada do *Miniconda installer* de http://conda.pydata.org/miniconda.html. Com o `miniconda` você pode (e deve!) criar ambientes (*conda environments*) que usam qualquer versão de Python (por exemplo Python 2.7 ou Python 3.5). Por isso Recomendamos que você instale a última versão, Python 3.5, e se mais tarde precisar de um ambiente Python 2.7, você pode simplesmente criar um. Usuários `Windows` precisam escolher entre 32-bit (em geral o bom e velho `Windows XP`) ou 64-bit (Windows modernos).
+Faça o *download* e instale a versão apropriada do *Miniconda installer* de http://conda.pydata.org/miniconda.html. Com o `miniconda` você pode (e deve!) criar ambientes (*conda environments*) que usam qualquer versão de Python (por exemplo Python 2.7 ou Python 3.5). Por isso Recomendamos que você instale a última versão, Python 3.5, e se mais tarde precisar de um ambiente Python 2.7, você pode simplesmente criar um. Usuários `Windows` precisam escolher entre 32-bit (em geral o bom e velho `Windows XP`) ou 64-bit (Windows modernos).
 
 ### Windows
 
-
 Rode o *installer*. Escolha *For all users* ao invés de *For just myself* para que o `miniconda` seja instalado fora do espaço de usuário e,
-por isso, mas facilmente configurável. Clique em ambas caixas que colocam o `miniconda` como o Python default,
+por isso, mas facilmente configurável. Clique em ambas caixas que colocam o `miniconda` como o Python *default*,
 e que adiciona ao *path*.
 
 **CUIDADO 0:** Se você não tem permissão para usar *For all users*,
 então os caminhos (*paths*) abaixo terão que ser editados para refletir a sua pasta!
 
-**CUIDADO 1:** Se você usa outra distribuição Python, como ArcGIS,
-você **não** pode marcar as caixas que fazem do `miniconda` o sua Python *default* nem a que adiciona no *path*.
-Nesse caso você terá que procurar o ícone do *Anaconda Prompt* em "Start Menu=>All Programs=>Anaconda3.
+**CUIDADO 1:** Se você usa outra distribuição Python, como a do `ArcGIS`,
+você **não** pode marcar as caixas que fazem do `miniconda` o sua Python **default** nem a que adiciona no *path*.
+Nesse caso você terá que ativar o `conda` manualmente pelo `terminal` digitando:
+
+```
+C:\Miniconda3\Scripts\activate
+conda install console_shortcut
+```
+
+e depois abrir sempre pelo ícone do *Anaconda Prompt* em "Start Menu=>All Programs=>Anaconda3.
 
 ### Linux/OS X (Ou Windows 10 bash)
 
@@ -80,7 +86,7 @@ deactivate  # Windows
 source deactivate  # OSX e Linux
 ```
 
-# Se o `miniconda` não for instalado como o seu Python default...
+# Se o miniconda não for instalado como o seu Python *default*...
 
 Se você escolher não colocar a distribuição Python `miniconda` no seu `~.bashrc` ou *path* do Windows,
 você deve lembrar de sempre ativar o ambiente `miniconda` manualmente toda vez que for usar digitando:
@@ -90,7 +96,7 @@ C:\Miniconda3\Scripts\activate CBO2016  # Windows
 export PATH=$HOME/miniconda3/bin:$PATH && source activate CBO2016  # OSX e Linux
 ```
 
-## Test se tudo está instalado corretamente
+## Cheque se tudo está instalado corretamente
 
 TODO
 

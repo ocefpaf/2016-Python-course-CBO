@@ -8,7 +8,6 @@ dependencies:
     - altair
     - cartopy
     - cmocean
-    - console_shortcut
     - folium
     - iris
     - jupyter
