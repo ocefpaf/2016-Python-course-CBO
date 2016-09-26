@@ -1,23 +1,22 @@
-name: mapping
+name: CBO2016
 channels:
     - conda-forge
 dependencies:
-    - python=2.7
-    - numpy
-    - jupyter
-    - matplotlib
-    - scipy
-    - fiona
-    - rasterio
-    - rios
-    - rasterstats
+    - python=3.4
+    - pip
+    - anaconda-navigator
+    - altair
     - cartopy
     - cmocean
-    - netcdf4
-    - xarray
-    - pyresample
-    - gridgeo
+    - console_shortcut
     - folium
+    - iris
+    - jupyter
+    - matplotlib
     - mplleaflet
-    - pyhum
+    - nb_conda_kernels
+    - netcdf4
+    - numpy
+    - scipy
+    - xarray
     - xlrd
