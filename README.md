@@ -72,6 +72,8 @@ conda update --yes --all
 conda env create environment.yml
 ```
 
+## Ativar o ambiente Python do curso
+
 Assim que o comando terminar de instalar tudo você poderá abrir o ambiente do curso digitando:
 
 ```bash
@@ -98,7 +100,11 @@ export PATH=$HOME/miniconda3/bin:$PATH && source activate CBO2016  # OSX e Linux
 
 ## Cheque se tudo está instalado corretamente
 
-TODO
+1. Faça *download* do material do curso através do link https://github.com/ocefpaf/2016-Python-course-CBO/archive/master.zip
+2. descompacte o arquivo e navegue até a pasta do material
+3. [ative](https://github.com/ocefpaf/2016-Python-course-CBO#ativar-o-ambiente-python-do-curso) o ambiente Python do curso
+4. digite `jupyter notebook` e certifique-se que o seu navegador padrão abriu na página inicial dos notebooks para o curso
+5. clique no notebook `checar_ambiente`
+6. vá em `Kernel` &rarr; `Restart & Run All` e certifique-se que todas as células rodaram sem nenhuma mensagem de erro
 
-PS: Alunos avançados podem tentar utilizar outras distribuições,
-mas se certifiquem que conseguem rodar os exemplos ANTES do curso!
+Qualquer dúvidas e/ou problemas por favor use a interface de [*issues*](https://github.com/ocefpaf/2016-Python-course-CBO/issues) do GitHub para se comunicar com os ministrantes.

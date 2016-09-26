@@ -1,5 +1,6 @@
 name: CBO2016
 channels:
+    - ioos
     - conda-forge
 dependencies:
     - python=3.4
