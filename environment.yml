@@ -2,21 +2,45 @@ name: CBO2016
 channels:
     - ioos
     - conda-forge
+    - r
 dependencies:
     - python=3.4
     - pip
-    - anaconda-navigator
     - altair
+    - anaconda-navigator
     - cartopy
     - cmocean
+    - ctd
+    - cython
+    - dask
+    - fiona
     - folium
+    - fortran-magic
+    - gdal
+    - geopandas
+    - gsw
     - iris
     - jupyter
     - matplotlib
     - mplleaflet
     - nb_conda_kernels
     - netcdf4
+    - numba
     - numpy
+    - oceans
+    - oct2py
+    - pandas
+    - pyproj
+    - r-essentials
+    - r-oce
+    - rasterio
+    - requests
+    - rpy2
+    - scikit-image
+    - scikit-learn
     - scipy
+    - seaborn
+    - shapely
+    - statsmodels
     - xarray
     - xlrd

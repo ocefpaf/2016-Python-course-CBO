@@ -1,10 +1,11 @@
 language: generic
 
+sudo: false
+
 os:
   - osx
   - linux
 
-sudo: false
 
 install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then URL="https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh" ; fi
@@ -13,6 +14,8 @@ install:
   - bash miniconda.sh -b -p $HOME/miniconda
   - export PATH="$HOME/miniconda/bin:$PATH"
   - conda update --yes --all
+  - conda-env create -f environment.yml
+  - source activate CBO2016
 
 script:
-  - conda env create -f environment.yml
+  - jupyter nbconvert --to markdown --execute --ExecutePreprocessor.timeout=240 notebooks/check_env.ipynb

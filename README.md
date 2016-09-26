@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ocefpaf/2016-Python-course-CBO.svg?branch=master)](https://travis-ci.org/ocefpaf/2016-Python-course-CBO) [![Build status](https://ci.appveyor.com/api/projects/status/dokxy0ev3h7tmp60?svg=true)](https://ci.appveyor.com/project/ocefpaf/2016-python-course-cbo) [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org:/repo/ocefpaf/2016-python-course-cbo)
 
-## TODOS OS ALUNOS DEVEM TRAZER LAPTOP PRÓPRIO E CONFIGURADO DE ACORDO COM AS INSTRUÇÕES ABAIXO ANTES DO INÍCIO DO CURSO!!!
+## ATENÇÃO: TODOS OS ALUNOS DEVEM TRAZER LAPTOP PRÓPRIO E CONFIGURADO DE ACORDO COM AS INSTRUÇÕES ABAIXO ANTES DO INÍCIO DO CURSO! NÃO HAVERÁ TEMPO PARA CONFIGURAR COMPUTADORES DURANTE O CURSO!!
 
 ## Instruções para instalação da distribuição Python
 
@@ -104,7 +104,7 @@ export PATH=$HOME/miniconda3/bin:$PATH && source activate CBO2016  # OSX e Linux
 2. descompacte o arquivo e navegue até a pasta do material
 3. [ative](https://github.com/ocefpaf/2016-Python-course-CBO#ativar-o-ambiente-python-do-curso) o ambiente Python do curso
 4. digite `jupyter notebook` e certifique-se que o seu navegador padrão abriu na página inicial dos notebooks para o curso
-5. clique no notebook `checar_ambiente`
+5. clique no notebook `check_env.ipynb`
 6. vá em `Kernel` &rarr; `Restart & Run All` e certifique-se que todas as células rodaram sem nenhuma mensagem de erro
 
 Qualquer dúvidas e/ou problemas por favor use a interface de [*issues*](https://github.com/ocefpaf/2016-Python-course-CBO/issues) do GitHub para se comunicar com os ministrantes.

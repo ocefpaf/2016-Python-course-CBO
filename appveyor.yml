@@ -1,30 +1,24 @@
-environment:
-  CONDA_INSTALL_LOCN: "C:\\conda"
+build: false
 
-platform:
-    - x64
+environment:
+  matrix:
+    - PYTHON: "C:\\Miniconda-x64"
+      PYTHON_VERSION: "3.4"
+      PYTHON_ARCH: "64"
+    - PYTHON: "C:\\Miniconda"
+      PYTHON_VERSION: "3.4"
+      PYTHON_ARCH: "32"
+
+init:
+  - "ECHO %PYTHON_VERSION% %MINICONDA%"
+
 
 install:
-    - ps: if ($env:APPVEYOR_PULL_REQUEST_NUMBER -and $env:APPVEYOR_BUILD_NUMBER -ne ((Invoke-RestMethod `
-        https://ci.appveyor.com/api/projects/$env:APPVEYOR_ACCOUNT_NAME/$env:APPVEYOR_PROJECT_SLUG/history?recordsNumber=50).builds | `
-        Where-Object pullRequestId -eq $env:APPVEYOR_PULL_REQUEST_NUMBER)[0].buildNumber) { `
-          throw "There are newer queued builds for this pull request, failing early." }
-
-    # Use the pre-installed Miniconda.
-    - ps: if($env:TARGET_ARCH -eq 'x86')
-            {$root = "C:\Miniconda"}
-          else
-            {$root = "C:\Miniconda-x64"}
-          $env:path="$root;$root\Scripts;$root\Library\bin;$($env:path)"
-
-    - cmd: set PATH=%CONDA_INSTALL_LOCN%;%CONDA_INSTALL_LOCN%\scripts;%PATH%
-
-    - cmd: conda update --yes --all
-
-# Skip .NET project specific build phase.
-build: off
+  - "set PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+  - conda update --all --yes
+  - "conda-env create -f environment.yml"
+  - activate CBO2016
+  - conda install console_shortcut --yes
 
 test_script:
-    - cmd: conda env create -f environment.yml
-    - cmd: activate CBO2016
-    - cmd: conda install console_shortcut
+  - jupyter nbconvert --to markdown --execute --ExecutePreprocessor.timeout=240 notebooks/check_env.ipynb
