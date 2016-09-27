@@ -1,7 +1,7 @@
 name: CBO2016
 channels:
-    - ioos
     - conda-forge
+    - ioos
     - r
 dependencies:
     - python=3.4
@@ -19,6 +19,7 @@ dependencies:
     - gdal
     - geopandas
     - gsw
+    - ioos::hdf5=1.8.17=0
     - iris
     - jupyter
     - matplotlib
