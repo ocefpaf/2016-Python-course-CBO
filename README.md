@@ -4,6 +4,10 @@
 
 ## ATENÇÃO: TODOS OS ALUNOS DEVEM TRAZER LAPTOP PRÓPRIO E CONFIGURADO DE ACORDO COM AS INSTRUÇÕES ABAIXO ANTES DO INÍCIO DO CURSO! NÃO HAVERÁ TEMPO PARA CONFIGURAR COMPUTADORES DURANTE O CURSO!!
 
+## Material para o primeiro dia do curso
+
+http://oceanauta.com.br/cbo-2016/
+
 ## Instruções para instalação da distribuição Python
 
 Recomendamos a distribuição Python [miniconda](http://conda.pydata.org/miniconda.html),
