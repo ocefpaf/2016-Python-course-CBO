@@ -102,13 +102,18 @@ C:\Miniconda3\Scripts\activate CBO2016  # Windows
 export PATH=$HOME/miniconda3/bin:$PATH && source activate CBO2016  # OSX e Linux
 ```
 
+## Download dos dados usados na geração dos mapa
+1. Faça *download* do arquivo [feature_download.py](https://raw.githubusercontent.com/SciTools/cartopy/master/tools/feature_download.py)
+2. [ative](https://github.com/ocefpaf/2016-Python-course-CBO#ativar-o-ambiente-python-do-curso) o ambiente Python do curso
+3. Execute o comando: `python feature_download.py cultural-extra cultural gshhs physical`
+
 ## Cheque se tudo está instalado corretamente
 
 1. Faça *download* do material do curso através do link https://github.com/ocefpaf/2016-Python-course-CBO/archive/master.zip
 2. descompacte o arquivo e navegue até a pasta do material
-3. [ative](https://github.com/ocefpaf/2016-Python-course-CBO#ativar-o-ambiente-python-do-curso) o ambiente Python do curso
-4. digite `jupyter notebook` e certifique-se que o seu navegador padrão abriu na página inicial dos notebooks para o curso
+3. Caso não esteja com o ambiente do curso ativado [ative](https://github.com/ocefpaf/2016-Python-course-CBO#ativar-o-ambiente-python-do-curso) o ambiente Python do curso
+4. digite `jupyter notebook`, e certifique-se que o seu navegador padrão abriu na página inicial dos notebooks para o curso
 5. clique no notebook `check_env.ipynb`
-6. vá em `Kernel` &rarr; `Restart & Run All` e certifique-se que todas as células rodaram sem nenhuma mensagem de erro
+6. vá em `Kernel` &rarr; `Restart & Run All`, e certifique-se que todas as células rodaram sem nenhuma mensagem de erro
 
 Qualquer dúvidas e/ou problemas por favor use a interface de [*issues*](https://github.com/ocefpaf/2016-Python-course-CBO/issues) do GitHub para se comunicar com os ministrantes.
