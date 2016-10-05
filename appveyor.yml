@@ -19,7 +19,9 @@ install:
   - "conda-env create -f environment.yml"
   - activate CBO2016
   - conda install console_shortcut --yes
+  # FIXME: Fortran cells.
+  - conda install m2w64-gcc-fortran --yes
 
 test_script:
-  - jupyter nbconvert --to markdown --execute --ExecutePreprocessor.timeout=240 notebooks/check_env.ipynb
-  - jupyter nbconvert --to markdown --execute notebooks/slides.ipynb
+  - jupyter nbconvert --to markdown --execute --ExecutePreprocessor.timeout=480 notebooks/check_env.ipynb
+  - jupyter nbconvert --to markdown --execute --ExecutePreprocessor.timeout=480 notebooks/slides.ipynb

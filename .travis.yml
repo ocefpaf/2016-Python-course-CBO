@@ -8,14 +8,20 @@ os:
 
 
 install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then URL="https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh" ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then URL="https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh" ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then URL="https://repo.continuum.io/miniconda/Miniconda2-latest-MacOSX-x86_64.sh" ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then URL="https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh" ; fi
   - wget $URL -O miniconda.sh
   - bash miniconda.sh -b -p $HOME/miniconda
   - export PATH="$HOME/miniconda/bin:$PATH"
   - conda update --yes --all
   - conda-env create -f environment.yml
   - source activate CBO2016
+  # Fortran cells.
+  - conda install gcc --yes
+  # GUI (R png figures)
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      export DISPLAY=:99.0 ; sh -e /etc/init.d/xvfb start;
+    fi
 
 script:
   - jupyter nbconvert --to markdown --execute --ExecutePreprocessor.timeout=480 notebooks/check_env.ipynb
