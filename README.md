@@ -59,11 +59,11 @@ export PATH=$HOME/miniconda3/bin:$PATH
 
 ## Criar um ambiente para o curso
 
-Download o arquivo [environment.yml](https://raw.githubusercontent.com/ioos/notebooks_demos/master/environment.yml) clicando com o botão direito do *mouse* e escolha `salvar como...`,
+Download o arquivo [environment.yml](https://raw.githubusercontent.com/ocefpaf/2016-Python-course-CBO/master/environment.yml) clicando com o botão direito do *mouse* e escolha `salvar como...`,
 ou, no `OS X` e `Linux`, use os comandos abaixo:
 
 ```bash
-url=https://raw.githubusercontent.com/ioos/notebooks_demos/master/environment.yml
+url=https://raw.githubusercontent.com/ocefpaf/2016-Python-course-CBO/master/environment.yml
 curl $url -o environment.yml
 ```
 
