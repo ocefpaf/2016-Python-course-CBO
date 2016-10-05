@@ -22,3 +22,4 @@ install:
 
 test_script:
   - jupyter nbconvert --to markdown --execute --ExecutePreprocessor.timeout=240 notebooks/check_env.ipynb
+  - jupyter nbconvert --to markdown --execute notebooks/slides.ipynb
