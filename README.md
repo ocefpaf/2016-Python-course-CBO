@@ -113,7 +113,7 @@ export PATH=$HOME/miniconda3/bin:$PATH && source activate CBO2016  # OSX e Linux
 2. descompacte o arquivo e navegue até a pasta do material
 3. Caso não esteja com o ambiente do curso ativado [ative](https://github.com/ocefpaf/2016-Python-course-CBO#ativar-o-ambiente-python-do-curso) o ambiente Python do curso
 4. digite `jupyter notebook`, e certifique-se que o seu navegador padrão abriu na página inicial dos notebooks para o curso
-5. clique no notebook `check_env.ipynb`
+5. navega na pasta `notebooks` e clique no notebook `check_env.ipynb`
 6. vá em `Kernel` &rarr; `Restart & Run All`, e certifique-se que todas as células rodaram sem nenhuma mensagem de erro
 
 Qualquer dúvidas e/ou problemas por favor use a interface de [*issues*](https://github.com/ocefpaf/2016-Python-course-CBO/issues) do GitHub para se comunicar com os ministrantes.
