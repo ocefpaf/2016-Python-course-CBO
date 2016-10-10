@@ -20,7 +20,10 @@ install:
   - activate CBO2016
   - conda install console_shortcut --yes
   # FIXME: Fortran cells.
-  - conda install m2w64-gcc-fortran --yes
+  - conda install -c conda-forge mingwpy --yes
+  - set CFG=%CONDA_PREFIX%\Lib\distutils\distutils.cfg
+  - echo [build] >> "%CFG%"
+  - echo compiler=mingw32 >> "%CFG%"
 
 test_script:
   - jupyter nbconvert --to markdown --execute --ExecutePreprocessor.timeout=480 notebooks/check_env.ipynb
